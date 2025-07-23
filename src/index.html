@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-sand text-textColor font-serif">
+    <div class="max-w-lg mx-auto space-y-10">
+      <div class="w-full py-14">
+        <div class="px-4 text-center">
+          <h1 class="text-6xl tracking-widest">EMMA</h1>
+          <h3 class="text-xl mt-5 tracking-widest">och</h3>
+          <h1 class="text-6xl mt-5 tracking-widest">GUSTAV</h1>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <div class="max-w-7xl mx-auto px-4">
+          <nav>
+            <div class="flex gap-6 justify-center">
+              <div><a href="#">START</a></div>
+              <div><a href="#events">EVENTS</a></div>
+              <div><a href="#boende">BOENDE</a></div>
+              <div><a href="#gifts">GÅVOR</a></div>
+              <div><a href="#osa">OSA</a></div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex justify-center items-center">
+            <div
+              class="relative group cursor-pointer"
+              onclick="toggleOverlay()"
+            >
+              <img
+                src="./images/image0.jpeg"
+                alt="Placeholder Image"
+                class="w-96 border-8 border-white shadow-lg"
+              />
+              <div class="absolute inset-0 text-center mt-5">
+                <span
+                  class="text-white text-base bg-black bg-opacity-25 px-4 py-2 rounded"
+                  >Klicka för att läsa om vår historia</span
+                >
+              </div>
+              <div
+                id="overlay"
+                class="absolute inset-0 bg-black bg-opacity-0 text-white text-center p-10 opacity-0 transition-opacity duration-300 ease-in-out"
+              >
+                <h1 class="text-2xl mb-5">Vår historia</h1>
+                <p>
+                  Genevieve and Connor met in 2009 during senior year of high
+                  school, during an Intro to Photography class. Students were
+                  assigned a project that required them to shoot architectural
+                  buildings throughout San Francisco. One afternoon, they ran
+                  into each other on the street - they were photographing the
+                  same building, just from different vantage points! - and
+                  decided to shoot together. The afternoon turned to evening and
+                  ended with ice cream, where they talked until the shop closed.
+                  And the rest, as they say, is history.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+          <h4 class="text-base tracking-widest">KÄRA VÄNNER OCH FAMILJ</h4>
+          <h3 class="text-xl tracking-wide mt-5">
+            Med stor glädje bjuder vi in er till att fira vår kärlek under tre
+            oförglömliga dagar!
+          </h3>
+          <h3 class="text-xl mt-5">Mallorca</h3>
+        </div>
+      </div>
+
+      <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
+
+      <div class="w-full" id="events">
+        <h1 class="text-3xl tracking-widest text-center mb-8">EVENTS</h1>
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-8"
+        >
+          <div class="text-center">
+            <h4 class="text-xl tracking-widest mb-4">PRE-WEDDING</h4>
+            <h5 class="text-sm">Torsdag, 10 September, 2026</h5>
+            <h5 class="text-sm">18:00 - 21:00</h5>
+            <h5 class="text-sm">Plats: Hotel Zafiro Palace Alcudia</h5>
+
+            <p class="mt-3">Tapasbuffé och drinkar 🥂</p>
+          </div>
+          <div class="text-center">
+            <h4 class="text-xl tracking-widest mb-4">PRE-WEDDING</h4>
+            <h5 class="text-sm">Fredag, 11 September, 2026</h5>
+            <h5 class="text-sm">15:00 - 01:00</h5>
+            <h5 class="text-sm">Plats: Hemligt</h5>
+
+            <p class="mt-3">Vigsel, middag & fest 💍</p>
+          </div>
+          <div class="text-center">
+            <h4 class="text-xl tracking-widest mb-4">POST-WEDDING</h4>
+            <h5 class="text-sm">Lördag, 12 September, 2026</h5>
+            <h5 class="text-sm">12:00 - 15:00</h5>
+            <h5 class="text-sm">Plats: Stranden, Alcudia</h5>
+
+            <p class="mt-3">Strandhäng 🏖️</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
+
+      <div class="w-full text-center" id="boende">
+        <h1 class="text-3xl tracking-widest mb-8">BOENDE</h1>
+
+        <p class="mb-10">
+          Vi kommer att bo på hotellet nedan under dessa dagar. Vi önskar att så
+          många som möjligt av er gäster vill spendera era nätter på detta
+          boende tillsammans med oss.
+        </p>
+        <p class="font-semibold">Zafiro Palace Hotel Alcudia</p>
+        <p class="text-sm">Carrer de Minerva, 19</p>
+        <p class="text-sm">07400 Port d'Alcúdia</p>
+        <p class="text-sm">Illes Balears, Spanien</p>
+        <p class="mt-10">
+          Barnvänligt, ligger precis vid stranden och 30 minuter från
+          bröllopsplatsen!
+        </p>
+        <a
+          href="https://www.sofiaalcudiabeach.com/en/"
+          target="_blank"
+          class="mt-2 underline hover:text-gray-500"
+          >Besök hotellets hemsida här</a
+        >
+      </div>
+
+      <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
+
+      <div class="w-full text-center" id="gifts">
+        <h1 class="text-3xl tracking-widest mb-8">GÅVOR</h1>
+        <p>
+          Den största gåvan vi kan få är att ni delar denna dag med oss. Vill ni
+          utöver er närvaro ge en gåva önskas ett bidrag till en kommande resa.
+        </p>
+      </div>
+
+      <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
+
+      <div class="w-full text-center" id="osa">
+        <h1 class="text-3xl tracking-widest mb-8">OSA</h1>
+        <p class="">Vänligen svara via QR kod nedan eller följande länk:</p>
+        <a
+          href="https://example.org"
+          target="_blank"
+          class="underline hover:text-gray-500"
+          >OSA formulär</a
+        >
+        <img
+          src="./images/wedding-rsvp-qr-code.png"
+          class="w-24 border-4 mx-auto border-white"
+        />
+      </div>
+
+      <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
+
+      <div class="w-full text-center">
+        <h1 class="text-3xl tracking-widest mb-8">Frågor?</h1>
+        <p class="mb-2">
+          Om ni har frågor, så tveka inte på att höra av er till oss.
+        </p>
+        <button
+          class="bg-black text-white rounded-md text-sm font-medium h-9 px-4 py-2"
+          onclick="togglePhoneNumber()"
+        >
+          Visa kontaktinformation
+        </button>
+        <div id="phoneNumbers" class="hidden">
+          <p>Emma: 0700000000</p>
+          <p>Gustav: 0700000000</p>
+        </div>
+      </div>
+
+      <button
+        id="scrollToTopBtn"
+        onclick="scrollToTop()"
+        class="fixed bottom-4 right-4 bg-black text-white p-3 rounded-full hidden"
+        aria-label="Scrolla upp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 15l7-7 7 7"
+          />
+        </svg>
+      </button>
+
+      <div></div>
+    </div>
+
+    <script>
+      function toggleOverlay() {
+        const overlay = document.getElementById("overlay");
+        overlay.classList.toggle("opacity-0");
+        overlay.classList.toggle("bg-opacity-0");
+        overlay.classList.toggle("bg-opacity-75");
+        overlay.classList.toggle("opacity-100");
+      }
+
+      function togglePhoneNumber() {
+        const phoneNumbers = document.getElementById("phoneNumbers");
+        const button = event.target;
+
+        const isHidden = phoneNumbers.classList.toggle("hidden");
+        button.textContent = isHidden
+          ? "Visa kontaktinformation"
+          : "Dölj kontaktinformation";
+      }
+
+      window.addEventListener("scroll", function () {
+        const btn = document.getElementById("scrollToTopBtn");
+        if (window.scrollY > 600) {
+          btn.classList.remove("hidden");
+        } else {
+          btn.classList.add("hidden");
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>
