@@ -3,11 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Emma & Gustav 2026</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-sand text-textColor font-serif">
-    <div class="max-w-lg mx-auto space-y-10">
+    <div class="max-w-lg mx-auto mt-10" id="passwordForm">
+      <div class="px-4 text-center space-y-4">
+        <h1 class="text-xl">Den här sidan är skyddad med lösenord. 🔒</h1>
+        <p class="hidden" id="passwordErrorMessage">Lösenordet är felaktigt</p>
+        <div class="flex gap-4 justify-center">
+          <input
+            type="password"
+            id="passwordInput"
+            placeholder="Lösenord"
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-1/2 min-w-0 rounded-md border bg-white px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive"
+          />
+          <button
+            class="bg-black text-white rounded-md text-sm font-medium h-9 px-4 py-2"
+            onclick="submitPassword()"
+          >
+            Skicka
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-lg mx-auto space-y-10 hidden" id="mainContent">
       <div class="w-full py-14">
         <div class="px-4 text-center">
           <h1 class="text-6xl tracking-widest">EMMA</h1>
@@ -33,39 +58,11 @@
       <div class="w-full">
         <div class="max-w-7xl mx-auto px-4">
           <div class="flex justify-center items-center">
-            <div
-              class="relative group cursor-pointer"
-              onclick="toggleOverlay()"
-            >
-              <img
-                src="./images/image0.jpeg"
-                alt="Placeholder Image"
-                class="w-96 border-8 border-white shadow-lg"
-              />
-              <div class="absolute inset-0 text-center mt-5">
-                <span
-                  class="text-white text-base bg-black bg-opacity-25 px-4 py-2 rounded"
-                  >Klicka för att läsa om vår historia</span
-                >
-              </div>
-              <div
-                id="overlay"
-                class="absolute inset-0 bg-black bg-opacity-0 text-white text-center p-10 opacity-0 transition-opacity duration-300 ease-in-out"
-              >
-                <h1 class="text-2xl mb-5">Vår historia</h1>
-                <p>
-                  Genevieve and Connor met in 2009 during senior year of high
-                  school, during an Intro to Photography class. Students were
-                  assigned a project that required them to shoot architectural
-                  buildings throughout San Francisco. One afternoon, they ran
-                  into each other on the street - they were photographing the
-                  same building, just from different vantage points! - and
-                  decided to shoot together. The afternoon turned to evening and
-                  ended with ice cream, where they talked until the shop closed.
-                  And the rest, as they say, is history.
-                </p>
-              </div>
-            </div>
+            <img
+              src="./images/image0.jpeg"
+              alt="Placeholder Image"
+              class="w-96 border-8 border-white shadow-lg"
+            />
           </div>
         </div>
       </div>
@@ -77,7 +74,8 @@
             Med stor glädje bjuder vi in er till att fira vår kärlek under tre
             oförglömliga dagar!
           </h3>
-          <h3 class="text-xl mt-5">Mallorca</h3>
+          <p class="mt-6">Mallorca, 2026</p>
+          <p class="mt-6 text-sm">Bröllopsdagen vill vi hålla barnfri</p>
         </div>
       </div>
 
@@ -97,44 +95,48 @@
             <p class="mt-3">Tapasbuffé och drinkar 🥂</p>
           </div>
           <div class="text-center">
-            <h4 class="text-xl tracking-widest mb-4">PRE-WEDDING</h4>
+            <h4 class="text-xl tracking-widest mb-4">BRÖLLOPSDAG</h4>
             <h5 class="text-sm">Fredag, 11 September, 2026</h5>
-            <h5 class="text-sm">15:00 - 01:00</h5>
+            <h5 class="text-sm">15:30 - 01:30</h5>
             <h5 class="text-sm">Plats: Hemligt</h5>
+            <h5 class="text-sm font-semibold">Barnfritt</h5>
 
             <p class="mt-3">Vigsel, middag & fest 💍</p>
           </div>
           <div class="text-center">
             <h4 class="text-xl tracking-widest mb-4">POST-WEDDING</h4>
             <h5 class="text-sm">Lördag, 12 September, 2026</h5>
-            <h5 class="text-sm">12:00 - 15:00</h5>
-            <h5 class="text-sm">Plats: Stranden, Alcudia</h5>
 
-            <p class="mt-3">Strandhäng 🏖️</p>
+            <p class="mt-3">Mer info kommer</p>
           </div>
         </div>
       </div>
 
       <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
 
-      <div class="w-full text-center" id="boende">
+      <div class="w-full text-center px-6" id="boende">
         <h1 class="text-3xl tracking-widest mb-8">BOENDE</h1>
 
+        <p class="mb-6">
+          Vi kommer att bo på hotellet nedan under dessa dagar, och vi hoppas
+          att så många som möjligt av er gäster vill göra detsamma.
+        </p>
         <p class="mb-10">
-          Vi kommer att bo på hotellet nedan under dessa dagar. Vi önskar att så
-          många som möjligt av er gäster vill spendera era nätter på detta
-          boende tillsammans med oss.
+          Det är på detta hotell som
+          <a href="#events" class="underline">pre-wedding</a> kommer att hållas.
+          På bröllopsdagen är det här bussen kommer att både hämta och lämna er
+          gäster.
         </p>
         <p class="font-semibold">Zafiro Palace Hotel Alcudia</p>
-        <p class="text-sm">Carrer de Minerva, 19</p>
-        <p class="text-sm">07400 Port d'Alcúdia</p>
+        <p class="text-sm">Carrer del Camí Reial Al Moll, 2</p>
+        <p class="text-sm">07400 Alcúdia</p>
         <p class="text-sm">Illes Balears, Spanien</p>
+
         <p class="mt-10">
-          Barnvänligt, ligger precis vid stranden och 30 minuter från
-          bröllopsplatsen!
+          Barnvänligt, ligger nära stranden och 30 minuter från bröllopsplatsen!
         </p>
         <a
-          href="https://www.sofiaalcudiabeach.com/en/"
+          href="https://www.zafirohotels.com/en/zafiro-palace-alcudia/"
           target="_blank"
           class="mt-2 underline hover:text-gray-500"
           >Besök hotellets hemsida här</a
@@ -143,48 +145,63 @@
 
       <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
 
-      <div class="w-full text-center" id="gifts">
+      <div class="w-full text-center px-6" id="gifts">
         <h1 class="text-3xl tracking-widest mb-8">GÅVOR</h1>
         <p>
           Den största gåvan vi kan få är att ni delar denna dag med oss. Vill ni
-          utöver er närvaro ge en gåva önskas ett bidrag till en kommande resa.
+          utöver er närvaro ge en gåva önskas ett bidrag till en kommande
+          bröllopsresa.
         </p>
       </div>
 
       <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
 
-      <div class="w-full text-center" id="osa">
+      <div class="w-full text-center px-6" id="osa">
         <h1 class="text-3xl tracking-widest mb-8">OSA</h1>
-        <p class="">Vänligen svara via QR kod nedan eller följande länk:</p>
-        <a
-          href="https://example.org"
-          target="_blank"
-          class="underline hover:text-gray-500"
-          >OSA formulär</a
-        >
-        <img
-          src="./images/wedding-rsvp-qr-code.png"
-          class="w-24 border-4 mx-auto border-white"
-        />
+        <p>
+          Vänligen svara om ni kommer
+          <a
+            href="https://example.org"
+            target="_blank"
+            class="underline hover:text-gray-500"
+          >
+            HÄR
+          </a>
+          💌
+        </p>
+
+        <p class="mt-6">
+          Önska musik
+          <a
+            href="https://forms.gle/GLBTfTWE6xh8PW446"
+            target="_blank"
+            class="underline hover:text-gray-500"
+          >
+            HÄR
+          </a>
+          🎵
+        </p>
       </div>
 
       <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
 
-      <div class="w-full text-center">
-        <h1 class="text-3xl tracking-widest mb-8">Frågor?</h1>
+      <div class="w-full text-center px-6" id="gifts">
+        <h1 class="text-3xl tracking-widest mb-8">VILL DU HÅLLA TAL?</h1>
+        <p>
+          Vill du hålla tal, spexa eller göra något annat roligt? Kontakta vårt
+          fantastiska toastpar Linnéa och Olivia.
+        </p>
+      </div>
+
+      <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
+
+      <div class="w-full text-center px-6">
+        <h1 class="text-3xl tracking-widest mb-8">FRÅGOR?</h1>
         <p class="mb-2">
           Om ni har frågor, så tveka inte på att höra av er till oss.
         </p>
-        <button
-          class="bg-black text-white rounded-md text-sm font-medium h-9 px-4 py-2"
-          onclick="togglePhoneNumber()"
-        >
-          Visa kontaktinformation
-        </button>
-        <div id="phoneNumbers" class="hidden">
-          <p>Emma: 0700000000</p>
-          <p>Gustav: 0700000000</p>
-        </div>
+        <p>Emma <a href="tel:+46761713386" class="underline">076 171 33 86</a></p>
+        <p>Gustav <a href="tel:+46736268960" class="underline">073 626 89 60</a></p>
       </div>
 
       <button
@@ -213,6 +230,23 @@
     </div>
 
     <script>
+      function submitPassword() {
+        const password = document.getElementById("passwordInput").value;
+        const mainContent = document.getElementById("mainContent");
+        const passwordForm = document.getElementById("passwordForm");
+        const passwordErrorMessage = document.getElementById(
+          "passwordErrorMessage"
+        );
+
+        if (password === "1206") {
+          mainContent.classList.toggle("hidden");
+          passwordForm.classList.toggle("hidden");
+          passwordErrorMessage.classList.add("hidden");
+        } else {
+          passwordErrorMessage.classList.remove("hidden");
+        }
+      }
+
       function toggleOverlay() {
         const overlay = document.getElementById("overlay");
         overlay.classList.toggle("opacity-0");
@@ -221,15 +255,12 @@
         overlay.classList.toggle("opacity-100");
       }
 
-      function togglePhoneNumber() {
-        const phoneNumbers = document.getElementById("phoneNumbers");
-        const button = event.target;
-
-        const isHidden = phoneNumbers.classList.toggle("hidden");
-        button.textContent = isHidden
-          ? "Visa kontaktinformation"
-          : "Dölj kontaktinformation";
-      }
+      const passwordInput = document.getElementById("passwordInput");
+      passwordInput.addEventListener("keyup", () => {
+        if (event.key === "Enter") {
+          submitPassword();
+        }
+      });
 
       window.addEventListener("scroll", function () {
         const btn = document.getElementById("scrollToTopBtn");
