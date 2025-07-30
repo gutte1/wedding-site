@@ -117,30 +117,48 @@
       <div class="w-full text-center px-6" id="boende">
         <h1 class="text-3xl tracking-widest mb-8">BOENDE</h1>
 
-        <p class="mb-6">
-          Vi kommer att bo på hotellet nedan under dessa dagar, och vi hoppas
-          att så många som möjligt av er gäster vill göra detsamma.
-        </p>
-        <p class="mb-10">
-          Det är på detta hotell som
-          <a href="#events" class="underline">pre-wedding</a> kommer att hållas.
-          På bröllopsdagen är det här bussen kommer att både hämta och lämna er
-          gäster.
-        </p>
-        <p class="font-semibold">Zafiro Palace Hotel Alcudia</p>
-        <p class="text-sm">Carrer del Camí Reial Al Moll, 2</p>
-        <p class="text-sm">07400 Alcúdia</p>
-        <p class="text-sm">Illes Balears, Spanien</p>
+        <div class="space-y-4">
+          <p>
+            Vi kommer att bo på hotellet nedan under dessa dagar, och vi hoppas
+            att så många som möjligt av er gäster vill göra detsamma.
+          </p>
+          <p>
+            Det är på detta hotell som
+            <a href="#events" class="underline">pre-wedding</a> kommer att
+            hållas. På bröllopsdagen är det här bussen kommer att både hämta och
+            lämna er gäster.
+          </p>
+          <p class="font-semibold">Hotellrabbatt 👀</p>
+          <p>
+            Vi har ordnat en <span class="font-semibold">rabattkod</span> för er
+            som vill bo på detta hotell. Använd koden EMMA&GUSTAV26 vid bokning.
+          </p>
 
-        <p class="mt-10">
-          Barnvänligt, ligger nära stranden och 30 minuter från bröllopsplatsen!
-        </p>
-        <a
-          href="https://www.zafirohotels.com/en/zafiro-palace-alcudia/"
-          target="_blank"
-          class="mt-2 underline hover:text-gray-500"
-          >Besök hotellets hemsida här</a
-        >
+          <button
+            class="bg-black text-white rounded-md text-sm font-medium h-9 px-4 py-2"
+            onclick="copyDiscountCode(event)"
+          >
+            Kopiera rabattkod
+          </button>
+
+          <div>
+            <p class="font-semibold">Zafiro Palace Hotel Alcudia</p>
+            <p class="text-sm">Carrer del Camí Reial Al Moll, 2</p>
+            <p class="text-sm">07400 Alcúdia</p>
+            <p class="text-sm">Illes Balears, Spanien</p>
+          </div>
+
+          <p>
+            Hotellet ligger nära stranden och 30 minuter från bröllopsplatsen!
+          </p>
+
+          <a
+            href="https://www.zafirohotels.com/en/zafiro-palace-alcudia/"
+            target="_blank"
+            class="mt-2 underline hover:text-gray-500"
+            >Besök hotellets hemsida här</a
+          >
+        </div>
       </div>
 
       <hr class="h-px bg-gray-700 border-0 dark:bg-gray-700" />
@@ -187,9 +205,17 @@
 
       <div class="w-full text-center px-6" id="gifts">
         <h1 class="text-3xl tracking-widest mb-8">VILL DU HÅLLA TAL?</h1>
+        <p class="mb-2">
+          Vill du hålla tal, spexa eller göra något annat roligt? Kontakta då
+          vårt fantastiska toastpar:
+        </p>
         <p>
-          Vill du hålla tal, spexa eller göra något annat roligt? Kontakta vårt
-          fantastiska toastpar Linnéa och Olivia.
+          Linnea Persson
+          <a href="tel:+46761840714" class="underline">076-184 07 14</a>
+        </p>
+        <p>
+          Olivia Mas
+          <a href="tel:+4607492777" class="underline">070-749 27 77</a>
         </p>
       </div>
 
@@ -200,8 +226,12 @@
         <p class="mb-2">
           Om ni har frågor, så tveka inte på att höra av er till oss.
         </p>
-        <p>Emma <a href="tel:+46761713386" class="underline">076 171 33 86</a></p>
-        <p>Gustav <a href="tel:+46736268960" class="underline">073 626 89 60</a></p>
+        <p>
+          Emma <a href="tel:+46761713386" class="underline">076-171 33 86</a>
+        </p>
+        <p>
+          Gustav <a href="tel:+46736268960" class="underline">073-626 89 60</a>
+        </p>
       </div>
 
       <button
@@ -229,54 +259,6 @@
       <div></div>
     </div>
 
-    <script>
-      function submitPassword() {
-        const password = document.getElementById("passwordInput").value;
-        const mainContent = document.getElementById("mainContent");
-        const passwordForm = document.getElementById("passwordForm");
-        const passwordErrorMessage = document.getElementById(
-          "passwordErrorMessage"
-        );
-
-        if (password === "1206") {
-          mainContent.classList.toggle("hidden");
-          passwordForm.classList.toggle("hidden");
-          passwordErrorMessage.classList.add("hidden");
-        } else {
-          passwordErrorMessage.classList.remove("hidden");
-        }
-      }
-
-      function toggleOverlay() {
-        const overlay = document.getElementById("overlay");
-        overlay.classList.toggle("opacity-0");
-        overlay.classList.toggle("bg-opacity-0");
-        overlay.classList.toggle("bg-opacity-75");
-        overlay.classList.toggle("opacity-100");
-      }
-
-      const passwordInput = document.getElementById("passwordInput");
-      passwordInput.addEventListener("keyup", () => {
-        if (event.key === "Enter") {
-          submitPassword();
-        }
-      });
-
-      window.addEventListener("scroll", function () {
-        const btn = document.getElementById("scrollToTopBtn");
-        if (window.scrollY > 600) {
-          btn.classList.remove("hidden");
-        } else {
-          btn.classList.add("hidden");
-        }
-      });
-
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

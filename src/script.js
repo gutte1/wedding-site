@@ -1,0 +1,47 @@
+function submitPassword() {
+  const password = document.getElementById("passwordInput").value;
+  const mainContent = document.getElementById("mainContent");
+  const passwordForm = document.getElementById("passwordForm");
+  const passwordErrorMessage = document.getElementById("passwordErrorMessage");
+
+  if (password === "1206") {
+    mainContent.classList.toggle("hidden");
+    passwordForm.classList.toggle("hidden");
+    passwordErrorMessage.classList.add("hidden");
+  } else {
+    passwordErrorMessage.classList.remove("hidden");
+  }
+}
+
+function copyDiscountCode(event) {
+  navigator.clipboard.writeText("EMMA&GUSTAV26");
+  const button = event.currentTarget;
+  const originalContent = button.innerHTML;
+  button.innerHTML = "Kopierat!";
+  setTimeout(() => {
+    button.innerHTML = originalContent;
+  }, 3000);
+}
+
+const passwordInput = document.getElementById("passwordInput");
+passwordInput.addEventListener("keyup", () => {
+  if (event.key === "Enter") {
+    submitPassword();
+  }
+});
+
+window.addEventListener("scroll", function () {
+  const btn = document.getElementById("scrollToTopBtn");
+  if (window.scrollY > 600) {
+    btn.classList.remove("hidden");
+  } else {
+    btn.classList.add("hidden");
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
