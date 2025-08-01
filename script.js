@@ -17,7 +17,7 @@ function copyDiscountCode(event) {
   navigator.clipboard.writeText("EMMA&GUSTAV26");
   const button = event.currentTarget;
   const originalContent = button.innerHTML;
-  button.innerHTML = "Kopierat!";
+  button.innerHTML = "Kopierad!";
   setTimeout(() => {
     button.innerHTML = originalContent;
   }, 3000);
