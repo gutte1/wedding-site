@@ -23,6 +23,14 @@ function copyDiscountCode(event) {
   }, 3000);
 }
 
+const TARGET_DATE = new Date(2026, 8, 11);
+const now = new Date();
+const diff = TARGET_DATE.getTime() - now.getTime();
+const MS_PER_DAY = 24 * 60 * 60 * 1000;
+const days = Math.max(0, Math.ceil(diff / MS_PER_DAY));
+const word = days === 1 ? 'dag' : 'dagar';
+document.getElementById('countdown').textContent = `${days} ${word} kvar 🤍`;
+
 const passwordInput = document.getElementById("passwordInput");
 passwordInput.addEventListener("keyup", () => {
   if (event.key === "Enter") {
